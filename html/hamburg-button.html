@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/hamburg-button.css">
+  <title>hamburg-button</title>
+</head>
+
+<body>
+
+  <div class="nana">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+
+  <div class="nana2">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nana3">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nana4">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script>
+  var $spans = $('span')
+  var index = 1
+  $('.nana').click(function () {
+    if (index == 1) {
+      $spans.eq(0).css('transform', 'translateY(29.5px) rotate(50deg)')
+      $spans.eq(1).css({
+        transform: 'translateX(-90px)',
+        opacity: '0'
+      })
+      $spans.eq(2).css('transform', 'translateY(-29.5px) rotate(-45deg)')
+      index = 0
+      console.log(index);
+    } else {
+      $spans.eq(0).css('transform', 'translateY(0) rotate(0)')
+      $spans.eq(1).css({
+        transform: 'translateX(0)',
+        opacity: '1'
+      })
+      $spans.eq(2).css('transform', 'translateY(0) rotate(0)')
+      index = 1;
+      console.log(index + '--------------');
+    }
+  })
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+body {
+    padding         : 0;
+    margin          : 0;
+    background-color: #123456;
+}
+
+.box {
+    width           : 300px;
+    height          : 250px;
+    background-color: white;
+    opacity         : 0.5;
+
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* h1标签 */
+.Loginbox {
+    text-align: center;
+}
+
+input[type='text'],
+input[type='PassWord'] {
+    display      : block;
+    margin       : 15px auto;
+    outline      : none;
+    width        : 180px;
+    height       : 35px;
+    text-align   : center;
+    border-radius: 24px;
+    border       : 2px solid #123456;
+    transition   : 0.25s;
+}
+
+input[type='button'] {
+    width        : 90px;
+    height       : 35px;
+    margin       : 10px auto;
+    border-radius: 18px;
+    border       : 2px solid #123456;
+    outline      : none;
+    display      : block;
+    cursor       : pointer;
+}
+
+input[type='text']:focus,
+input[type='PassWord']:focus {
+    width : 240px;
+    border: 2px solid green;
+}

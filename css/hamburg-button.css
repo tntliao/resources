@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin : 0;
+}
+
+.nana {
+    display: flex;
+    left   : 20%;
+}
+
+.nana2 {
+    left: 40%;
+}
+
+.nana3 {
+    display: flex;
+    left   : 60%;
+}
+
+.nana4 {
+    display : flex;
+    left    : 80%;
+    position: relative;
+}
+
+.nana,
+.nana2,
+.nana3,
+.nana4 {
+    width          : 90px;
+    height         : 75px;
+    position       : absolute;
+    top            : 50%;
+    transform      : translate(-50%, -50%);
+    flex-direction : column;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+/* 第一个 */
+.nana span {
+    width        : 90px;
+    height       : 15px;
+    background   : tomato;
+    border-radius: 10px;
+    transition   : all .3s ease-in-out;
+}
+
+/* .nana:hover span:nth-child(1) {
+    transform: translateY(29.5px) rotate(50deg);
+}
+
+.nana:hover span:nth-child(2) {
+    transform: translateX(-90px);
+    opacity  : 0;
+}
+
+.nana:hover span:nth-child(3) {
+    transform: translateY(-29.5px) rotate(-45deg);
+} */
+
+/* 第二个 */
+.nana2 span {
+    display: block;
+}
+
+.nana2 span:nth-of-type(2),
+.nana2 span:nth-of-type(3) {
+    width     : 45px;
+    height    : 15px;
+    display   : inline-block;
+    background: rgb(91, 181, 255);
+    transition: all .3s ease-in-out;
+}
+
+.nana2 span:nth-of-type(1) {
+    margin-bottom: 15px;
+}
+
+.nana2 span:nth-of-type(2) {
+    border-top-left-radius   : 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.nana2 span:nth-of-type(3) {
+    border-top-right-radius   : 10px;
+    border-bottom-right-radius: 10px;
+    margin-left               : -6px;
+}
+
+.nana2 span:nth-of-type(4) {
+    margin-top: 15px;
+}
+
+.nana2 span:nth-of-type(1),
+.nana2 span:nth-of-type(4) {
+    width        : 90px;
+    height       : 15px;
+    background   : rgb(91, 181, 255);
+    border-radius: 10px;
+    transition   : all .3s ease-in-out;
+}
+
+.nana2:hover span:nth-child(1) {
+    transform: translateY(29.5px) rotate(45deg);
+}
+
+.nana2:hover span:nth-child(2) {
+    transform: translateX(-45px);
+    opacity  : 0;
+}
+
+.nana2:hover span:nth-child(3) {
+    transform: translateX(45px);
+    opacity  : 0;
+}
+
+.nana2:hover span:nth-child(4) {
+    transform: translateY(-35.5px) rotate(-45deg);
+}
+
+/* 第三个 */
+.nana3 span {
+    width        : 90px;
+    height       : 15px;
+    background   : rgb(103, 255, 136);
+    border-radius: 10px;
+    transition   : all .3s ease-in-out;
+}
+
+.nana3:hover span:nth-child(1) {
+    transform: translateY(29.5px) rotate(50deg);
+}
+
+.nana3:hover span:nth-child(2) {
+    opacity: 0;
+}
+
+.nana3:hover span:nth-child(3) {
+    transform: translateY(-29.5px) rotate(-45deg);
+}
+
+/* 第四个 */
+.nana4 span {
+    width           : 90px;
+    height          : 15px;
+    display         : block;
+    background      : rgb(230, 105, 255);
+    border-radius   : 10px;
+    transition      : all .3s ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+.nana4 span:nth-child(4),
+.nana4 span:nth-child(5) {
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nana4:hover span:nth-child(1) {
+    width    : 0;
+    transform: translateY(27.5px);
+}
+
+.nana4:hover span:nth-child(2) {
+    width: 0;
+}
+
+.nana4:hover span:nth-child(3) {
+    width    : 0;
+    transform: translateY(-27.5px);
+}
+
+.nana4:hover span:nth-child(4) {
+    transform: translate(-45px, -8.5px) rotate(45deg);
+}
+
+.nana4:hover span:nth-child(5) {
+    transform: translate(-45px, -7.5px) rotate(-45deg);
+}

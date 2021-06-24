@@ -1,0 +1,1019 @@
+/* 主页index.html样式表 */
+
+/* 顶部导航条的容器 */
+
+.topbar-wrapper {
+    /* 设置宽度全屏 */
+    width           : 100%;
+    /* 设置高度和行高 */
+    height          : 40px;
+    line-height     : 40px;
+    /* 设置背景颜色 */
+    background-color: #333333;
+}
+
+/* 为topbar开启相对定位 */
+
+.topbar {
+    position: relative;
+}
+
+/* 设置超链接的颜色 */
+
+.topbar a {
+    font-size: 12px;
+    color    : #B0B0B0;
+    display  : block;
+}
+
+/* 设置超链接移入的效果 */
+
+.topbar a:hover {
+    color: #eeeff4;
+}
+
+/* 设置中间分格线 */
+
+.topbar .line {
+    font-size: 12px;
+    color    : #3f3d31;
+    margin   : 0 8px;
+}
+
+/* 设置左侧导航栏 */
+
+.service,
+.topbar li {
+    float: left;
+}
+
+/* 为app设置相对定位 */
+
+.service .app {
+    position: relative;
+}
+
+/* 下载app的三角形 */
+
+.service>li .app:hover::after {
+    /* 参考app定位 */
+    position           : absolute;
+    left               : 0;
+    right              : 0;
+    bottom             : 0;
+    margin             : auto;
+    content            : '';
+    width              : 0px;
+    height             : 0px;
+    /* 设置四个方向的边框颜色都为透明 */
+    border             : 7px solid transparent;
+    /* 单独设置下边框颜色为白色 */
+    border-bottom-color: white;
+}
+
+/* 下拉app */
+
+.app .qrcode {
+    position        : absolute;
+    left            : -39px;
+    width           : 124px;
+    height          : 0;
+    overflow        : hidden;
+    /*  */
+    transition      : height .3s;
+    line-height     : 1;
+    text-align      : center;
+    background-color: white;
+    /* 设置阴影 x和y偏移量0 阴影模糊半径5 */
+    box-shadow      : 0 0 5px rgba(0, 0, 0, .3);
+    z-index         : 9999;
+}
+
+/* 鼠标触摸后的高度 */
+
+.app:hover .qrcode {
+    height: 148px;
+}
+
+/* 小米app二维码 */
+
+.app .qrcode img {
+    width : 90px;
+    margin: 18px 17px 12px;
+}
+
+/* 二维码中的文字 */
+
+.service .app span {
+    font-size: 13px;
+    color    : black;
+}
+
+/* 设置右侧 */
+
+.shop-car,
+.user-info {
+    float: right;
+}
+
+/* 购物车字体样式 */
+
+.shop-car a {
+    margin-left     : 25px;
+    text-align      : center;
+    width           : 120px;
+    background-color: #424242;
+    position        : relative;
+    z-index         : 999;
+}
+
+/* 购物车触摸 */
+
+.shop-car :hover a {
+    background-color: white;
+    color           : #ff6700;
+}
+
+/* 购物车图标 */
+
+.shop-car .fas {
+    margin-right: 2px;
+}
+
+/* 购物车下的隐藏框 */
+
+.shop-car .cart-memu {
+    position        : absolute;
+    right           : 0;
+    width           : 315px;
+    height          : 0;
+    background-color: white;
+    overflow        : hidden;
+    transition      : height .3s;
+    box-shadow      : 0 0 5px rgba(0, 0, 0, .3);
+    font-size       : 12px;
+    text-align      : center;
+    z-index         : 10;
+}
+
+.shop-car .cart-memu p {
+    display       : inline-block;
+    /* 行高有继承，设置成默认， */
+    line-height   : 1;
+    /* 设置文字垂直偏移量 */
+    vertical-align: -32px;
+}
+
+/* 购物车触摸后隐藏框的属性 */
+
+.shop-car:hover .cart-memu {
+    height    : 100px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+/* 头部导航 */
+
+.header {
+    height: 100px;
+}
+
+/* milogo */
+
+.logo {
+    width           : 55px;
+    height          : 55px;
+    position        : relative;
+    left            : 0;
+    top             : 0;
+    float           : left;
+    background-color: #ff6700;
+    margin-top      : 22.5px;
+    overflow        : hidden;
+    /* 隐藏logo的文字 */
+    text-indent     : -99999px;
+}
+
+.header-wrapper {
+    position: relative;
+}
+
+/* 设置mi-logo样式 */
+
+.header .logo .mi-logo {
+    position           : absolute;
+    width              : 55px;
+    height             : 55px;
+    left               : 0;
+    background-image   : url(../images/xm/mi-logo.png);
+    /* 设置背景图片居中 */
+    background-position: center;
+    background-color   : #ff6700;
+    transition         : left .2s;
+}
+
+/* 设置mi-home样式 */
+
+.header .logo .mi-home {
+    position           : absolute;
+    width              : 55px;
+    height             : 55px;
+    left               : -55px;
+    background-image   : url(../images/xm/mi-home.png);
+    /* 设置背景图片居中 */
+    background-position: center;
+    background-color   : #ff6700;
+    transition         : left .2s;
+}
+
+/* 设置logo hover状态 */
+
+.header .logo:hover .mi-home {
+    left: 0;
+}
+
+.header .logo:hover .mi-logo {
+    left: 55px;
+}
+
+/* 设置导航条 */
+
+.nav-wrapper {
+    width         : 800px;
+    padding-left  : 50px;
+    height        : 80px;
+    padding-top   : 20px;
+    float         : left;
+    margin-left   : 7px;
+    /* line-height: 80px; */
+}
+
+/* 设置li横向排列 */
+
+.nav-wrapper .nav li {
+    float        : left;
+    padding-right: 21px;
+}
+
+/* 为左侧导航栏设置相对定位 */
+
+.goods-all {
+    position: relative;
+}
+
+/* 设置左侧导航栏 */
+
+.left-list {
+    padding         : 20px 0;
+    width           : 234px;
+    height          : 420px;
+    background-color: rgba(0, 0, 0, .6);
+    /* 对.goods-all进行参考定位 */
+    position        : absolute;
+    left            : -112px;
+    top             : 80px;
+    z-index         : 9999;
+}
+
+/*把类叠加，要不下面的css会覆盖 */
+
+.nav .goods-all .left-list li {
+    line-height: 42px;
+    width      : 234px;
+    padding    : 0;
+}
+
+/* 设置左侧导航a的样式 */
+
+.nav-wrapper .nav .goods-all .left-list li a {
+    padding: 0 30px;
+    display: block;
+    height : 42px;
+    color  : #FFFFFF;
+}
+
+/* 设置li触摸状态 */
+
+.nav .goods-all .left-list li:hover {
+    background-color: #ff6700;
+}
+
+/* 设置左侧导航栏i字体图标样式 */
+
+.nav .goods-all .left-list li i {
+    float      : right;
+    line-height: 42px;
+}
+
+/* 设置全部商品分类 */
+
+.nav-wrapper .nav .all-goods {
+    /* 设置隐藏当位置依然会占据 */
+    visibility: hidden;
+}
+
+/* 设置字体的样式 */
+
+.nav-wrapper .nav li a {
+    display    : block;
+    font-size  : 16px;
+    padding-top: 20px;
+    height     : 60px;
+}
+
+/* 设置导航条字体hover状态 */
+
+.nav-wrapper .nav li a:hover {
+    color: #ff6700;
+}
+
+/* 手机展示层 */
+
+.goods-show {
+    position        : absolute;
+    left            : 0;
+    top             : 100px;
+    width           : 100%;
+    height          : 0px;
+    background-color: white;
+    transition      : height .3s;
+    box-shadow      : 0 2px 2px rgba(0, 0, 0, .2);
+    overflow        : hidden;
+    z-index         : 9999;
+}
+
+/* 设置hover弹出 */
+
+.nav-wrapper .nav .show:hover~.goods-show,
+.goods-show:hover {
+    height    : 230px;
+    border-top: 1px solid #dddddd;
+}
+
+.goods-show .phone-show {
+    height: 230px;
+}
+
+/* li标签 */
+
+.goods-show .phone-show .goods {
+    /* 清除继承 */
+    padding         : 0;
+    width           : 203px;
+    height          : 201px;
+    background-color: white;
+}
+
+.goods-show .phone-show .goods a {
+    width     : 203px;
+    height    : 135px;
+    text-align: center;
+}
+
+.goods-show .phone-show .goods a p {
+    font-size: 12px;
+    color    : #333;
+}
+
+.goods-show .phone-show .goods a span {
+    font-size: 12px;
+    color    : #ff6700;
+}
+
+.goods-show .phone-show .goods img {
+    width       : 160px;
+    height      : 110px;
+    padding-left: 15px;
+    padding-top : 25px;
+}
+
+/* 手机间隔线 */
+
+.goods-show .phone-show .line {
+    /* 清除继承 */
+    padding         : 0;
+    margin-top      : 50px;
+    width           : 1px;
+    height          : 100px;
+    background-color: #dddddd;
+}
+
+.search-wrapper {
+    /* width: 296px; */
+    height    : 50px;
+    float     : right;
+    margin-top: 25px;
+}
+
+/* 设置文本框样式 */
+
+.search-wrapper .search-input {
+    float       : left;
+    width       : 245px;
+    height      : 50px;
+    box-sizing  : border-box;
+    padding     : 0 10px;
+    outline     : none;
+    border      : 1px solid rgb(224, 224, 224);
+    border-right: none;
+    color       : rgb(117, 117, 117);
+}
+
+/* 设置按钮样式 */
+
+.search-wrapper .search-button {
+    float     : left;
+    padding   : 0;
+    width     : 52px;
+    height    : 50px;
+    box-sizing: border-box;
+    outline   : none;
+    color     : rgb(97, 97, 97);
+    font-size : 16px;
+    border    : 1px solid rgb(224, 224, 224);
+}
+
+/* 设置文本获取光标，文本框和按钮状态 */
+
+.search-wrapper .search-input:focus,
+.search-wrapper .search-input:focus+.search-button {
+    border-color: #ff6700;
+}
+
+/* 设置按钮触摸状态 */
+
+.search-wrapper .search-button:hover {
+    background-color: #ff6700;
+    border          : none;
+    color           : white;
+}
+
+/* 设置banner外层容器 */
+.banner-wrapper {
+    width: 100%;
+}
+
+/* 设置高度，开启定位为下子元素设置定位参照点 */
+.banner {
+    height  : 460px;
+    position: relative;
+}
+
+/* 开启li的绝对定位，让其全部重叠在一起 */
+.img-list li {
+    position: absolute;
+}
+
+.img-list li.active {
+    opacity: 1;
+    z-index: 99;
+}
+
+.img-list li img {
+    width: 100%;
+}
+
+/* 设置为块元素，否则会高度塌陷，塌陷也没有影响 */
+.img-list li a {
+    display: block;
+}
+
+.img-list li {
+    opacity   : 0;
+    transition: opacity .3s;
+}
+
+
+
+/* 设置控件 */
+#prev,
+#next {
+    position: absolute;
+    width   : 41px;
+    height  : 69px;
+    /* 设置垂直居中 */
+    bottom  : 0;
+    top     : 0;
+    margin  : auto 0;
+    z-index : 99;
+}
+
+/* 设置左边 */
+#prev {
+    left: 234px;
+}
+
+/* 设置右边 */
+#next {
+    right: 0;
+}
+
+/* 设置控件图片 */
+#prev a {
+    display            : block;
+    width              : 41px;
+    height             : 69px;
+    background-image   : url(../images/xm/controls.png);
+    background-position: -84px 0;
+}
+
+#next a {
+    display            : block;
+    width              : 41px;
+    height             : 69px;
+    background-image   : url(../images/xm/controls.png);
+    background-position: -124px 0;
+}
+
+/* 设置控件触摸发生变化 */
+#prev a:hover {
+    background-position: 0 0;
+}
+
+#next a:hover {
+    background-position: -42px 0;
+}
+
+/* 设置五个点的位置 */
+.banner-list {
+    position: absolute;
+    right   : 20px;
+    bottom  : 15px;
+    z-index : 9999;
+    cursor  : pointer;
+
+}
+
+/* 设置五个点样式 */
+.banner-list li {
+    float           : left;
+    width           : 6px;
+    height          : 6px;
+    border          : 2px solid;
+    border-radius   : 50%;
+    background-color: rgba(0, 0, 0, .4);
+    border-color    : hsla(0, 0%, 100%, .3);
+
+    margin-right: 4px;
+}
+
+/* 设置第一个默认显示状态 */
+.banner-list .active {
+    background-color: hsla(0, 0%, 100%, .4);
+    border-color    : rgba(0, 0, 0, .4);
+}
+
+/* 设置li触摸状态 */
+.banner-list li:hover {
+    background-color: hsla(0, 0%, 100%, .4);
+    border-color    : rgba(0, 0, 0, .4);
+}
+
+.back-top {
+    width           : 27px;
+    height          : 261px;
+    background-color: orange;
+    /* 设置固定定位 */
+    position        : fixed;
+
+    bottom: 40px;
+    /*将right值设置为视口宽度为50% */
+    right : 50%;
+
+    margin-right: -640px;
+    /* 
+        布局的等式
+            left + margin-left + width + margin-right + right = 视口宽度
+
+            auto + 0 + 26 + 640px + 50% = 视口宽度
+    */
+}
+
+/* 设置广告 */
+body .goods-ad {
+    margin-top: 15px;
+    height    : 170px;
+}
+
+/*快捷服务*/
+.goods-ad .ad-list {
+    width           : 234px;
+    height          : 170px;
+    background-color: #605752;
+    float           : left;
+}
+
+.goods-ad .ad-list li {
+    float : left;
+    width : 76px;
+    height: 82px;
+}
+
+
+/* 设置i快元素独占一行，从而换行 */
+.goods-ad .ad-list li i {
+    display      : block;
+    margin-bottom: 8px;
+}
+
+.goods-ad .ad-list li a {
+    font-size  : 16px;
+    color      : #c8bfba;
+    display    : block;
+    width      : 76px;
+    height     : 59px;
+    text-align : center;
+    padding-top: 23px;
+}
+
+
+.goods-ad .ad-list li a:hover {
+    color: #FFFFFF;
+}
+
+/* 设置线 */
+.goods-ad .ad-list a::before {
+    content         : '';
+    position        : relative;
+    top             : -21px;
+    left            : 15px;
+    display         : block;
+    width           : 48px;
+    height          : 1px;
+    background-color: #635a55;
+}
+
+.goods-ad .ad-list a::after {
+    content         : '';
+    position        : relative;
+    top             : -55px;
+    left            : 2px;
+    display         : block;
+    width           : 1px;
+    height          : 48px;
+    background-color: #635a55;
+}
+
+/* 广告图片 */
+.goods-ad .ad-img {
+    width      : 977px;
+    height     : 170px;
+    float      : left;
+    margin-left: 15px;
+}
+
+/* 设置每个a img大小左外边距14px */
+.goods-ad .ad-img li a {
+    height     : 170px;
+    float      : left;
+    margin-left: 14.4px;
+}
+
+/* 最后一个a清除外边距 */
+.goods-ad .ad-img li:first-child a {
+    margin: 0;
+}
+
+/* 设置img大小 */
+.goods-ad .ad-img img {
+    height: 100%;
+}
+
+.seconds {
+    height    : 6019px;
+    background: #f5f5f5;
+}
+
+.seconds_kill {
+    background: #f5f5f5;
+    height    : 6019px;
+}
+
+.seconds_kill>.kill_title {
+    margin     : 0;
+    font-size  : 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color      : #333;
+}
+
+.seconds_kill>.kill_row {
+    height: 340px;
+}
+
+.row_left .left_title {
+    float           : left;
+    padding-top     : 39px;
+    border-top      : 1px solid #ff6700;
+    width           : 234px;
+    height          : 300px;
+    background-color: #f1eded;
+    text-align      : center;
+}
+
+.row_left .left_title #p1 {
+    padding-top: 15px;
+}
+
+.row_left .left_title #img2 {
+    padding: 25px 0;
+}
+
+.row_left .left_title .countdown {
+    margin: 28px auto 0;
+    width : 168px;
+    height: 46px;
+}
+
+.row_left .left_title .countdown span {
+    display    : block;
+    width      : 46px;
+    height     : 46px;
+    background : #605751;
+    float      : left;
+    color      : #fff;
+    font-size  : 24px;
+    line-height: 46px;
+}
+
+.row_left .left_title .countdown i {
+    display    : block;
+    width      : 15px;
+    height     : 46px;
+    float      : left;
+    line-height: 46px;
+    color      : #605751;
+    font-size  : 28px;
+}
+
+.kill_row .div_list {
+    width      : 978px;
+    height     : 340px;
+    overflow   : hidden;
+    float      : left;
+    margin-left: 14px;
+    position   : relative;
+}
+
+.kill_row .right_list {
+    position  : absolute;
+    width     : 2976px;
+    height    : 341px;
+    left      : 0;
+    transition: left 1s;
+}
+
+.kill_row .right_list>li {
+    display         : block;
+    width           : 204px;
+    height          : 340px;
+    margin-right    : 14px;
+    background-color: rgb(255, 255, 255);
+    float           : left;
+    text-align      : center;
+    padding         : 0 15px;
+}
+
+.kill_row .right_list>li:nth-of-type(1),
+.kill_row .right_list>li:nth-of-type(6),
+.kill_row .right_list>li:nth-of-type(12) {
+    border-top: 1px solid #ffac13;
+}
+
+.kill_row .right_list>li:nth-of-type(2),
+.kill_row .right_list>li:nth-of-type(7),
+.kill_row .right_list>li:nth-of-type(9) {
+    border-top: 1px solid #83c44e;
+}
+
+.kill_row .right_list>li:nth-of-type(3),
+.kill_row .right_list>li:nth-of-type(5),
+.kill_row .right_list>li:nth-of-type(10) {
+    border-top: 1px solid #2196f3;
+}
+
+.kill_row .right_list>li:nth-of-type(11) {
+    border-top: 1px solid #e53935;
+}
+
+.kill_row .right_list>li:nth-of-type(4),
+.kill_row .right_list>li:nth-of-type(8) {
+    margin-right: 0px;
+    border-top  : 1px solid #e53935;
+
+}
+
+.kill_row .right_list>li a {
+    display    : block;
+    padding-top: 39px;
+}
+
+.kill_row .right_list>li a>img {
+    width : 160px;
+    height: 165px;
+}
+
+.kill_row .right_list>li a h3,
+.kill_row .right_list>li a>.p1 {
+    text-overflow: ellipsis;
+    color        : #212121;
+    overflow     : hidden;
+    white-space  : nowrap;
+}
+
+.kill_row .right_list>li a h3 {
+    margin-top: 22px;
+}
+
+.kill_row .right_list>li a>.p1 {
+    font-size    : 12px;
+    color        : #b0b0b0;
+    margin-bottom: 12px;
+}
+
+.kill_row .right_list>li a>p:last-of-type {
+    color: #ff6700;
+}
+
+.kill_row .right_list>li a>p:last-of-type span {
+    text-decoration: line-through;
+    color          : #b0b0b0;
+    margin-left    : 4px;
+}
+
+.seconds_kill {
+    position: relative;
+}
+
+.seconds_kill .right_control {
+    width      : 72px;
+    line-height: 24px;
+    position   : absolute;
+    right      : 0;
+    top        : 17px;
+    text-align : center;
+    cursor     : pointer;
+}
+
+.seconds_kill .control_left,
+.seconds_kill .control_right {
+    float     : left;
+    width     : 36px;
+    height    : 24px;
+    box-sizing: border-box;
+}
+
+.seconds_kill .right_control i {
+    color     : #b0b0b0;
+    transition: .5s color;
+}
+
+.seconds_kill .control_left:hover i,
+.seconds_kill .control_right:hover i {
+    color: #ff6700;
+}
+
+.seconds_kill .control_left.hover i,
+.seconds_kill .control_right.hover i {
+    color: #e0e0e0;
+}
+
+.seconds_kill .control_left {
+    border: 1px solid #e0e0e0;
+}
+
+.seconds_kill .control_right {
+    border     : 1px solid #e0e0e0;
+    border-left: none;
+}
+/* ================ */
+.leijun {
+    margin: 22px 0;
+}
+
+.leijun img {
+    width: 100%;
+}
+
+.m_phone {
+    height: 672px;
+}
+
+.m_phone .title {
+    height: 58px;
+}
+
+.m_phone .title h2 {
+    display    : block;
+    float      : left;
+    margin     : 0;
+    font-size  : 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color      : #333;
+}
+
+.m_phone .title .show_whole {
+    display    : block;
+    float      : right;
+    font-size  : 16px;
+    line-height: 58px;
+    color      : #424242;
+}
+
+.m_phone .title .show_whole a {
+    transition: color .5s;
+}
+
+.m_phone .show_whole a i {
+    margin-left  : 8px;
+    width        : 20px;
+    height       : 20px;
+    background   : #b0b0b0;
+    border-radius: 50%;
+    line-height  : 20px;
+    color        : #fff;
+    text-align   : center;
+    transition   : color .5s;
+}
+
+.m_phone .title .show_whole:hover a {
+    color: #ff6700;
+}
+
+.m_phone .title .show_whole:hover i {
+    background-color: #ff6700;
+}
+
+.m_phone .left_phone {
+    float           : left;
+    width           : 234px;
+    height          : 614px;
+    background-color: yellowgreen;
+    transition      : .5s;
+}
+
+.m_phone .left_phone a {
+    display: block;
+}
+
+.m_phone .left_phone a img {
+    width: 100%;
+}
+
+.m_phone .left_phone:hover {
+    transform : scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+.m_phone .right_phone {
+    float          : right;
+    width          : 978px;
+    height         : 614px;
+    margin-left    : 14px;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+    align-content  : space-between;
+}
+
+.m_phone .right_phone li {
+    width           : 234px;
+    height          : 300px;
+    background-color: rgb(255, 255, 255);
+    transition      : all .2s;
+    text-align      : center;
+}
+
+.m_phone .right_phone li:hover {
+    transform : scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+.m_phone .right_phone li a {
+    display: block;
+    padding: 20px 0;
+}
+
+.m_phone .right_phone li a img {
+    width: 160px;
+}
+
+.m_phone .right_phone li a h3 {
+    margin-top: 15px;
+}
+
+.m_phone .right_phone li a p {
+    color: #ffac13;
+}
+
+.m_phone .right_phone li a .p1 {
+    margin   : 2px 0 10px;
+    font-size: 12px;
+    color    : #b0b0b0;
+}
+
+.m_phone .right_phone li a p span {
+    text-decoration: line-through;
+    color          : #b0b0b0;
+    margin-left    : 4px;
+}
